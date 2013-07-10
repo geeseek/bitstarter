@@ -1,9 +1,9 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-//var contents = fs.readFileSync('./index.html');
-//var buffer = new Buffer(50);
-//buffer.write(contents);
+var contents = fs.readFileSync('./index.html');
+var buffer = new Buffer(50);
+buffer.write(contents);
 app.get('/', function(request, response) {
   response.send('hello world2!');
 });
